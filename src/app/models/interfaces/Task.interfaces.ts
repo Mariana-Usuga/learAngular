@@ -1,6 +1,6 @@
 export enum Levels {
   "Info",
-  "Unrgent",
+  "Urgent",
   "Blocking"
 }
 
