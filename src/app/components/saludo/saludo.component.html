@@ -1,0 +1,14 @@
+<p>saludo works! {{ name }} </p>
+
+<h3 [ngClass]="name == 'Anonimo' ? 'anonimo' : 'usuario' "  id="usuario" [innerText]="name" >
+
+</h3>
+
+<h5 [ngStyle]="{color: 'blue'} ">Hola, que tal</h5>
+
+<h5 [ngStyle]="myStyle">Hola, bueennass</h5>
+
+
+<button id="emit-alert" (click)="alertGreetings()">Mostrar alerta</button>
+<button id="emit-alert" (click)="sendMessageToFather()">mensaje del hijo al padre</button>
+

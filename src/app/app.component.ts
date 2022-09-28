@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'learnAngular';
+  usuario = 'name from app'
+
+  //se ejecuta cuando en el hijo (saludo compotente) se pulse un boton 
+  //viene en el hijo pero se ejecuta en el padre
+  receiveMessage(event: string){
+    alert(event)
+  }
 }
