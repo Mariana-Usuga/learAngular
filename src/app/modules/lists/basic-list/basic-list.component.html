@@ -1,1 +1,27 @@
-<p>basic-list works!</p>
+<!--BLOQUE DE DIRECTIVAS DE ATRIBUTO-->
+<p [ngStyle]=" {color: 'tomato', fontWeight: 'bolder'} ">basic-list works!</p>
+<p ngClass="underlined">basic-list works!!!1</p>
+
+
+<p [ngClass]="['underlined', 'small']">aun no tienes elementos en la lista</p>
+
+<p [ngClass]=" {underlined: false, small: true} ">aun no tienes elementos en la lista</p>
+
+<!--BLOQUE DE DIRECTIVAS ESTRUVTURALES-->
+
+<button (click)="changeLoading()"> {{loading? 'terminar carga': 'iniciar carga'}} </button>
+
+<p *ngIf="loading">Cargando...</p>
+
+<ng-container *ngIf="!loading; else elseTemplate">
+  <p>todo listo</p>
+</ng-container>
+
+<ng-template #elseTemplate>
+  <p>espere que termine el proceso</p>
+</ng-template>
+
+<!--bloque para explicar bel uso de NGFOR-->
+<div *ngFor="let item of listElements">
+  <p> {{item}} </p>
+</div>
