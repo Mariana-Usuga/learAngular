@@ -25,7 +25,12 @@ export class BasicListComponent implements OnInit {
       name: "huevos",
       price: 123,
       description: 'descr'
-    }
+    },
+    {
+      name: "huevos",
+      price: 123,
+      description: 'descr'
+    },
   ];
 
   constructor() { }
