@@ -22,6 +22,7 @@ export class SaludoComponent implements OnInit, OnDestroy, OnChanges {
     // intrucciones previas a la renderizacion del componente
     console.log('ngOnInit del cmp saludo')
   }
+  
   ngOnChanges(changes: SimpleChanges): void {
     console.log('onChanges recibe cambios', changes)
     console.log('valor nuevo', changes['name'].currentValue)

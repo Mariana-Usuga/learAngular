@@ -18,6 +18,7 @@ import { NotFoundPageComponent } from './components/pages/not-found-page/not-fou
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //modulo personalizado que exporta componentes de tipo Lista
 import { ListsModule } from './modules/lists/lists.module';
+import { ListContactsComponent } from './components/list-contacts/list-contacts.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ListsModule } from './modules/lists/lists.module';
     HomePageComponent,
     LoginPageComponent,
     RegisterPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    ListContactsComponent
   ],
   imports: [
     BrowserModule,
