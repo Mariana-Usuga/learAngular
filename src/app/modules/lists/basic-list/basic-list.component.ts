@@ -15,19 +15,20 @@ export type Product = {
 export class BasicListComponent implements OnInit {
 
   loading: boolean = false;
+  option: number = 0;
   listElements: Product[] = [
     {
       name: "leche",
-      price: 123,
+      price: 9,
       description: 'descr'
     },
     {
       name: "huevos",
-      price: 123,
+      price: 12,
       description: 'descr'
     },
     {
-      name: "huevos",
+      name: "carne",
       price: 123,
       description: 'descr'
     },
@@ -40,6 +41,10 @@ export class BasicListComponent implements OnInit {
 
   changeLoading(){
     this.loading = !this.loading;
+  }
+
+  chooseOption(chosenOption: number){
+    this.option = chosenOption
   }
 
 }

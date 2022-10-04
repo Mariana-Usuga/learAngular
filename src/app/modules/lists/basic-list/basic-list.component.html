@@ -22,6 +22,36 @@
 </ng-template>
 
 <!--bloque para explicar bel uso de NGFOR-->
-<div *ngFor="let item of listElements">
-  <p> {{item}} </p>
+<div *ngFor="let item of listElements; let i = index; let even = even">
+  <div [ngStyle]="even? {backgroundColor: 'blue', color: 'white'} : {backgroundColor: 'green', color: 'white'} " >
+    <p>ID: {{i+1}} </p>
+    <p> {{item.name}} - ${{item.price}} </p>
+    <p> {{item.description}} </p>
+  </div>
+</div>
+
+<!--bloque para entender ngSwitch-->
+<div [ngSwitch]="option" > 
+  <p [id]="1" *ngSwitchCase="1">has escogido la Opcion 1</p>
+  <p [id]="2" *ngSwitchCase="2">has escogido la Opcion 2</p>
+  <p [id]="3" *ngSwitchCase="3">has escogido la Opcion 3</p>
+  <p [id]="4" *ngSwitchCase="4">has escogido la Opcion 4</p>
+  <p *ngSwitchDefault class="close">NInguna de las opciones</p>
+</div>
+
+<div>
+  <input type="radio" name="opcion" (click)="chooseOption(1)">option 1
+  <input type="radio" name="opcion" (click)="chooseOption(2)">option 2
+  <input type="radio" name="opcion" (click)="chooseOption(3)">option 3
+  <input type="radio" name="opcion" (click)="chooseOption(4)">option 4
+  <input type="radio" selected="selected" name="opcion" (click)="chooseOption(4)">ocultar
+</div>
+
+<!--Podemos concatener directivas-->
+<div *ngFor="let item of listElements; let i = index; let even = even">
+  <div *ngIf="item.price > 10" [ngStyle]="even? {backgroundColor: 'blue', color: 'white'} : {backgroundColor: 'green', color: 'white'} " >
+    <p>ID: {{i+1}} </p>
+    <p> {{item.name}} - ${{item.price}} </p>
+    <p> {{item.description}} </p>
+  </div>
 </div>
