@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { Router, RouterModule, Routes } from '@angular/router';
 
@@ -42,7 +43,9 @@ import { ListContactsComponent } from './components/list-contacts/list-contacts.
     BrowserAnimationsModule,
     RouterModule,
     //importar modulo personalizado
-    ListsModule
+    ListsModule,
+    //importar el modulo httpClientModule para hacer peticiones http
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
