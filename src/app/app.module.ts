@@ -20,7 +20,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //modulo personalizado que exporta componentes de tipo Lista
 import { ListsModule } from './modules/lists/lists.module';
 import { ListContactsComponent } from './components/list-contacts/list-contacts.component';
-import { ContactsPageComponent } from './pages/contacts-page/contacts-page.component';
+import { ContactsPageComponent } from './components/pages/contacts-page/contacts-page.component';
+import { ContactDetailPageComponent } from './components/pages/contact-detail-page/contact-detail-page.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -37,13 +39,15 @@ import { ContactsPageComponent } from './pages/contacts-page/contacts-page.compo
     RegisterPageComponent,
     NotFoundPageComponent,
     ListContactsComponent,
-    ContactsPageComponent
+    ContactsPageComponent,
+    ContactDetailPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
     RouterModule,
+    AppRoutingModule,
     //importar modulo personalizado
     ListsModule,
     //importar el modulo httpClientModule para hacer peticiones http
