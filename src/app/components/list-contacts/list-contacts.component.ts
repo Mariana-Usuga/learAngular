@@ -19,6 +19,7 @@ export class ListContactsComponent implements OnInit, OnDestroy {
   constructor(private contactService: ContactService) { }
 
   ngOnInit(): void {
+    console.log('listtt')
     this.contactService.getContact()
     .then((list: IContact[]) => this.listContact = list)
     .catch((err) => alert('error al recuperar la lista'))
