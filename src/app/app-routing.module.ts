@@ -5,6 +5,7 @@ import { ContactsPageComponent } from './components/pages/contacts-page/contacts
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { NotFoundPageComponent } from './components/pages/not-found-page/not-found-page.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -28,11 +29,13 @@ const routes: Routes = [
   },
   {
     path: 'contacts',
-    component: ContactsPageComponent
+    component: ContactsPageComponent,
+    canActivate: [ AuthGuard ]
   },
   {
     path: 'contacts/:id',
-    component: ContactDetailPageComponent
+    component: ContactDetailPageComponent,
+    canActivate: [ AuthGuard ]
   },
   {
     path: '**',
