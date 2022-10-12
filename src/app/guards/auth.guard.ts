@@ -11,7 +11,7 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 //si devolvemos true --> cargamos la ruta
 //si devolvemos false --> no cargamos la ruta
-      return false;
+      return true;
   }
   
 }

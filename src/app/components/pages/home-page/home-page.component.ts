@@ -14,7 +14,7 @@ export class HomePageComponent implements OnInit {
   }
 
   navigateToContacts(): void{
-    //this.router.navigate()
+    this.router.navigate(['contacts'])
   }
 
 }
